@@ -32,6 +32,7 @@ const LogIn = () => {
   }
     return (
         <div>
+          
     <div className="hero bg-base-200 min-h-screen">
   <div className="hero-content flex-col ">
     <div className="text-center lg:text-left">
@@ -59,10 +60,16 @@ const LogIn = () => {
         <div className="form-control mt-6">
           <button className="btn btn-primary" >Login</button>
         </div>
+     
       </form>
+      <div>
+       
+      
+      </div>
       </div>
     </div>
   </div>
+ 
 </div>
        
     );
