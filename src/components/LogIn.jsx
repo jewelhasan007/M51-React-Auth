@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { nameContext } from './ContextAP';
 
 const LogIn = () => {
+  const AuthInfo = useContext(nameContext);
+  console.log(AuthInfo)
+
     return (
         <div>
     <div className="hero bg-base-200 min-h-screen">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
+      <div>
+        <h1>Name of User is :{AuthInfo.name}</h1>
+        <h1>Name of User is :{AuthInfo.age}</h1>
+      </div>
       <h1 className="text-5xl font-bold">Login now!</h1>
       <p className="py-6">
         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem

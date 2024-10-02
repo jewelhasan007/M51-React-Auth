@@ -11,6 +11,7 @@ import Root from './components/Root.jsx';
 import Home from './components/Home.jsx'
 import LogIn from './components/LogIn.jsx';
 import Register from './components/Register.jsx';
+import ContextAPI from './components/ContextAP.jsx';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-  <RouterProvider router={router} />
+ <ContextAPI>
+ <RouterProvider router={router} />
+ </ContextAPI>
   </StrictMode>,
 )
