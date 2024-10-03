@@ -34,6 +34,8 @@ const Navbar = () => {
         </li>
         <NavLink to={"/about"}><li><a>About</a></li></NavLink>
         <NavLink to={"/contact"}><li><a>Contact</a></li></NavLink>
+        <NavLink to={"/login-context"}><li><a>LogIn-Context</a></li></NavLink>
+        <NavLink to={"/register-context"}><li><a>Register-Context</a></li></NavLink>
       </ul>
     </div>
     <a className="btn btn-ghost text-xl">daisyUI</a>
@@ -52,6 +54,8 @@ const Navbar = () => {
       </li>
       <NavLink to={"/about"}><li><a>About</a></li></NavLink>
         <NavLink to={"/contact"}><li><a>Contact</a></li></NavLink>
+        <NavLink to={"/login-context"}><li><a>LogIn-Context</a></li></NavLink>
+        <NavLink to={"/register-context"}><li><a>Register-Context</a></li></NavLink>
     </ul>
   </div>
   <div className="navbar-end">

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { nameContext } from './ContextAP';
+import { nameContext } from './ContextAPI';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import app from './firebase.config';
 
