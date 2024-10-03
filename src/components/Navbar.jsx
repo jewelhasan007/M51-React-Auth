@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { nameContext } from './ContextAPI';
 
 const Navbar = () => {
+  const {user} = useContext(nameContext)
+console.log(user)
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -58,6 +61,10 @@ const Navbar = () => {
         <NavLink to={"/register-context"}><li><a>Register-Context</a></li></NavLink>
     </ul>
   </div>
+<div>
+  {user.email}
+</div>
+
   <div className="navbar-end">
     <a className="btn">Button</a>
   </div>
