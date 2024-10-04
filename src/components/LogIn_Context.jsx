@@ -3,7 +3,7 @@ import { nameContext } from "./ContextAPI";
 import { useNavigate } from "react-router-dom";
 
 const LogIn_Context = () => {
-  const {logUser} = useContext(nameContext)
+  const {logUser, googleLogIn} = useContext(nameContext)
   const navigate = useNavigate();
 
 
@@ -27,6 +27,16 @@ const LogIn_Context = () => {
     })
     .catch(error =>{
       console.log('error', error)
+    })
+  }
+
+  const handleGoogleLogIn = () =>{
+    googleLogIn()
+    .then(result=>{
+      console.log(result.user);
+    })
+    .catch(error=>{
+      console.log(error.message)
     })
   }
 
@@ -58,6 +68,9 @@ const LogIn_Context = () => {
      
         <div className="form-control mt-6">
           <button className="btn btn-sm">Login</button>
+        </div>
+        <div className="form-control mt-6">
+          <button className="btn btn-ghost" onClick={handleGoogleLogIn}>Google</button>
         </div>
       </form>
     </div>

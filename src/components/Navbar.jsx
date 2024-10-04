@@ -30,7 +30,11 @@ console.log(user)
         <NavLink to={"/"}><li><a>Home</a></li></NavLink>
         <NavLink to={"/about"}><li><a>About</a></li></NavLink>
         <NavLink to={"/contact"}><li><a>Contact</a></li></NavLink>
-        <NavLink to={"/profile"}><li><a>Profile</a></li></NavLink>
+        { user && 
+       <>
+       <NavLink to={"/profile"}><li><a>Profile</a></li></NavLink>
+       </> 
+         }
         <NavLink to={"/register-context"}><li><a>Register-Context</a></li></NavLink>
    
       </ul>
@@ -42,7 +46,11 @@ console.log(user)
     <NavLink to={"/"}><li><a>Home</a></li></NavLink>
       <NavLink to={"/about"}><li><a>About</a></li></NavLink>
         <NavLink to={"/contact"}><li><a>Contact</a></li></NavLink>
-        <NavLink to={"/profile"}><li><a>Profile</a></li></NavLink>
+       { user && 
+       <>
+       <NavLink to={"/profile"}><li><a>Profile</a></li></NavLink>
+       </> 
+         }
         <NavLink to={"/register-context"}><li><a>Register</a></li></NavLink>
        
     </ul>
