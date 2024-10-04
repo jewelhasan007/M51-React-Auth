@@ -4,12 +4,13 @@ import { nameContext } from "./ContextAPI";
 const LogIn_Context = () => {
   const {logUser} = useContext(nameContext)
 
+
   const handleLogIn = e =>{
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    // login from firebase
+    // // login from firebase
     logUser(email, password)
     .then(result =>{
       const id = result.user;
@@ -45,8 +46,9 @@ const LogIn_Context = () => {
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
         </div>
+     
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn btn-sm">Login</button>
         </div>
       </form>
     </div>

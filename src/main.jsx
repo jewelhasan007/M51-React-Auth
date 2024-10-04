@@ -14,6 +14,8 @@ import Register from './components/Register.jsx';
 import ContextAPI from './components/ContextAPI.jsx';
 import LogIn_Context from './components/LogIn_Context.jsx';
 import Register_Context from './components/Register_Context.jsx';
+import About from './components/About.jsx';
+import Contact from './components/Contact.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,12 +27,12 @@ const router = createBrowserRouter([
         element: <Home></Home> 
       },
       {
-        path: "/login",
-        element: <LogIn></LogIn>, 
+        path: "/about",
+        element: <About> </About>, 
       },
       {
-        path: "/register",
-        element: <Register></Register>, 
+        path: "/contact",
+        element: <Contact></Contact>, 
       },
       {
         path: "/login-context",

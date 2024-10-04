@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { nameContext } from './ContextAPI';
 
 const Navbar = () => {
-  const {user} = useContext(nameContext)
+  const {user, logOut} = useContext(nameContext)
 console.log(user)
     return (
         <div>
@@ -28,16 +28,10 @@ console.log(user)
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
         <NavLink to={"/"}><li><a>Home</a></li></NavLink>
-        <li>
-          <a>Profile</a>
-          <ul className="p-2">
-          <NavLink to={"/login"}><li><a>Log in</a></li></NavLink>
-          <NavLink to={"/register"}><li><a>Register</a></li></NavLink>
-          </ul>
-        </li>
+      
         <NavLink to={"/about"}><li><a>About</a></li></NavLink>
         <NavLink to={"/contact"}><li><a>Contact</a></li></NavLink>
-        <NavLink to={"/login-context"}><li><a>LogIn-Context</a></li></NavLink>
+       
         <NavLink to={"/register-context"}><li><a>Register-Context</a></li></NavLink>
       </ul>
     </div>
@@ -46,27 +40,26 @@ console.log(user)
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
     <NavLink to={"/"}><li><a>Home</a></li></NavLink>
-      <li>
-        <details>
-          <summary>Profile</summary>
-          <ul className="p-2">
-          <NavLink to={"/login"}><li><a>Log in</a></li></NavLink>
-          <NavLink to={"/register"}><li><a>Register</a></li></NavLink>
-          </ul>
-        </details>
-      </li>
+    
       <NavLink to={"/about"}><li><a>About</a></li></NavLink>
         <NavLink to={"/contact"}><li><a>Contact</a></li></NavLink>
-        <NavLink to={"/login-context"}><li><a>LogIn-Context</a></li></NavLink>
-        <NavLink to={"/register-context"}><li><a>Register-Context</a></li></NavLink>
+        
+        <NavLink to={"/register-context"}><li><a>Register</a></li></NavLink>
     </ul>
   </div>
-<div>
-  {user.email}
-</div>
+
 
   <div className="navbar-end">
-    <a className="btn">Button</a>
+ <div className='mx-4'>
+ {
+  user && user ? <> {user.email}
+  <button className="btn btn-sm mx-3" onClick={logOut}>Log Out</button></>
+  :
+  <Link to="/login-context"><button className="btn btn-primary" >sign In</button></Link>
+  }
+ 
+ </div>
+ 
   </div>
 </div>
         </div>
