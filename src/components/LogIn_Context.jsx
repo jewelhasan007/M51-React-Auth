@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { nameContext } from "./ContextAPI";
+import { useNavigate } from "react-router-dom";
 
 const LogIn_Context = () => {
   const {logUser} = useContext(nameContext)
+  const navigate = useNavigate();
 
 
   const handleLogIn = e =>{
@@ -10,11 +12,18 @@ const LogIn_Context = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
+    // to go to in home page
+    
+
     // // login from firebase
     logUser(email, password)
     .then(result =>{
       const id = result.user;
       console.log(id)
+      // input field reset call in login page
+      e.target.reset();
+      navigate("/");
+
     })
     .catch(error =>{
       console.log('error', error)
