@@ -7,16 +7,20 @@ export const nameContext = createContext(null);
 
 const ContextAPI = ({children}) => {
   const [user, setUser] = useState(null)
+  const [loading, setLoading] = useState(true)
 
   const createUser = (email, password) =>{
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   }
   const logUser = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   }
 
   // signOut
   const logOut = () =>{
+    setLoading(true);
     return signOut(auth);
   }
 
@@ -24,6 +28,8 @@ const ContextAPI = ({children}) => {
   useEffect(()=>{
     const unsubscribe = onAuthStateChanged(auth, currentUser =>{
       setUser(currentUser)
+      // loading false for PrivateRoute page loading
+      setLoading(false)
       console.log('the user is ', currentUser)
     });
     return ()=>{
@@ -34,7 +40,8 @@ const ContextAPI = ({children}) => {
   const AuthInfo = { user, 
     createUser,
     logUser,
-    logOut
+    logOut,
+    loading
      }
 
     return (

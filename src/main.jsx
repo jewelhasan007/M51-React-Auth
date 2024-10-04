@@ -17,6 +17,7 @@ import Register_Context from './components/Register_Context.jsx';
 import About from './components/About.jsx';
 import Contact from './components/Contact.jsx';
 import Profile from './components/Profile.jsx';
+import PrivateRoute from './components/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element:<Profile></Profile>, 
+        element:<PrivateRoute><Profile></Profile></PrivateRoute>, 
       },
       
     ]
