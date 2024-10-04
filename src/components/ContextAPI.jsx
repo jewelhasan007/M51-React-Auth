@@ -1,6 +1,7 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
-import {auth, GoogleAuthProvider} from "./firebase.config";
+import auth from "./firebase.config";
+import { GoogleAuthProvider } from "firebase/auth";
 
 
 export const nameContext = createContext(null);
@@ -20,7 +21,7 @@ const ContextAPI = ({children}) => {
   }
   
   const googleLogIn = () =>{
-    setLoading(true)
+    setLoading(true);
     return signInWithPopup(auth, provider);
   }
   // signOut
