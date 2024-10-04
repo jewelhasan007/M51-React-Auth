@@ -16,6 +16,7 @@ import LogIn_Context from './components/LogIn_Context.jsx';
 import Register_Context from './components/Register_Context.jsx';
 import About from './components/About.jsx';
 import Contact from './components/Contact.jsx';
+import Profile from './components/Profile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/register-context",
         element: <Register_Context></Register_Context>, 
+      },
+      {
+        path: "/profile",
+        element:<Profile></Profile>, 
       },
       
     ]

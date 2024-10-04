@@ -28,11 +28,11 @@ console.log(user)
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
         <NavLink to={"/"}><li><a>Home</a></li></NavLink>
-      
         <NavLink to={"/about"}><li><a>About</a></li></NavLink>
         <NavLink to={"/contact"}><li><a>Contact</a></li></NavLink>
-       
+        <NavLink to={"/profile"}><li><a>Profile</a></li></NavLink>
         <NavLink to={"/register-context"}><li><a>Register-Context</a></li></NavLink>
+   
       </ul>
     </div>
     <a className="btn btn-ghost text-xl">daisyUI</a>
@@ -40,11 +40,11 @@ console.log(user)
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
     <NavLink to={"/"}><li><a>Home</a></li></NavLink>
-    
       <NavLink to={"/about"}><li><a>About</a></li></NavLink>
         <NavLink to={"/contact"}><li><a>Contact</a></li></NavLink>
-        
+        <NavLink to={"/profile"}><li><a>Profile</a></li></NavLink>
         <NavLink to={"/register-context"}><li><a>Register</a></li></NavLink>
+       
     </ul>
   </div>
 
