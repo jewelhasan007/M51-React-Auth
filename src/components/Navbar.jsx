@@ -28,6 +28,7 @@ console.log(user)
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
         <NavLink to={"/"}><li><a>Home</a></li></NavLink>
+        <NavLink to={"/products"}><li><a>Products</a></li></NavLink>
         <NavLink to={"/about"}><li><a>About</a></li></NavLink>
         <NavLink to={"/contact"}><li><a>Contact</a></li></NavLink>
         { user && 
@@ -39,11 +40,12 @@ console.log(user)
    
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl">Shoptorogin Mon</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
     <NavLink to={"/"}><li><a>Home</a></li></NavLink>
+    <NavLink to={"/products"}><li><a>Products</a></li></NavLink>
       <NavLink to={"/about"}><li><a>About</a></li></NavLink>
         <NavLink to={"/contact"}><li><a>Contact</a></li></NavLink>
        { user && 
@@ -63,7 +65,7 @@ console.log(user)
   user && user ? <> {user.email}
   <button className="btn btn-sm mx-3" onClick={logOut}>Log Out</button></>
   :
-  <Link to="/login-context"><button className="btn btn-primary" >sign In</button></Link>
+  <Link to="/login-context"><button className="btn btn-sm" >Log In</button></Link>
   }
  
  </div>

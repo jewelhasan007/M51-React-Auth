@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "name": "CACTUS TOB",
+      "description": "CACTUS TOB",
+      "color": ["Mixed color","white color"],
+      "size": ["2", "3"],
+      "price":[ [6, 10],["8", "12"]], 
+      "image_url": "https://example.com/images/garden_tool_set.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Garden Kneeler and Seat",
+      "description": "A foldable kneeler and seat made from durable, waterproof materials.",
+      "price": 39.99,
+      "category": "Seating",
+      "stock": 75,
+      "image_url": "https://example.com/images/garden_kneeler.jpg"
+    }
+]
+
+
+
